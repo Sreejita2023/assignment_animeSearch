@@ -40,14 +40,16 @@ class _AnimeGridPageState extends State<AnimeGridPage> {
             : homeData.isLoading
                 ? Center(
                     child: CircularProgressIndicator(
-                      color: Colors.orange,
+                      color: Colors.blue,
                       strokeWidth: 5,
                     ),
                   )
+                // update the home page
                 : RefreshIndicator(
                     onRefresh: getData,
-                    color: Colors.orange,
+                    color: Colors.blue,
                     strokeWidth: 2.5,
+                    // for animations
                     child: LiveGrid.options(
                       padding: EdgeInsets.all(15).copyWith(left: 20, right: 20),
                       options: LiveOptions(
@@ -86,7 +88,7 @@ class _AnimeGridPageState extends State<AnimeGridPage> {
   }
 }
 // GridView.builder(
-//                       
+//
 //                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
 //                         crossAxisCount: 2,
 //                         childAspectRatio: 1.5 / 2.5,

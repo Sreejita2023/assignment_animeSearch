@@ -76,7 +76,7 @@ class AnimeDetailsHeader extends StatelessWidget {
                   height: 50,
                   width: 50,
                   child: CircularProgressIndicator(
-                    color: Colors.orange,
+                    color: Colors.blue,
                     backgroundColor: Colors.grey.withOpacity(.35),
                     strokeWidth: 6.0,
                     value: animeData.score / 10,

@@ -53,7 +53,7 @@ class HomeCard extends StatelessWidget {
                 IconButton(
                   icon: Icon(
                     Icons.bookmark_outline,
-                    color: Colors.orangeAccent,
+                    color: Colors.blueAccent,
                   ),
                   onPressed: () {},
                 ),

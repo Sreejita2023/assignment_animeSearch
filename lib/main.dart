@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
             elevation: 0,
           ),
           primaryColor: Colors.white, 
-          colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.orange),
+          colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.blue),
         ),
         home: HomeScreen(),
         routes: {

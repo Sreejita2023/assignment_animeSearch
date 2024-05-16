@@ -8,7 +8,7 @@ class AnimeDetailsGenres extends StatelessWidget {
   Widget moveLabel(String text, dynamic pokeData) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.orange,
+        color: Colors.blue,
         borderRadius: BorderRadius.circular(15),
       ),
       child: Center(

@@ -2,7 +2,6 @@ import 'package:anim_search/models/anime_model.dart';
 import 'package:anim_search/providers/data_provider.dart';
 import 'package:anim_search/widgets/anime_details_genres.dart';
 import 'package:anim_search/widgets/anime_details_header.dart';
-import 'package:anim_search/widgets/recommendation_card.dart';
 import 'package:anim_search/widgets/web_view_container.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -45,7 +44,7 @@ class _AnimeDetailScreenState extends State<AnimeDetailScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => WebViewContainer(animeData.url),
+                    builder: (context) => WebViewContainer(animeData.trailerUrl),
                   ),
                 );
               },
@@ -58,7 +57,7 @@ class _AnimeDetailScreenState extends State<AnimeDetailScreen> {
         ),
       ),
       extendBodyBehindAppBar: true,
-      backgroundColor: Colors.orange,
+      backgroundColor: Colors.blue,
       body: !dataProvider.isLoading
           ? Container(
               child: Stack(
@@ -78,7 +77,7 @@ class _AnimeDetailScreenState extends State<AnimeDetailScreen> {
                         ),
                       ),
                     ),
-                    color: Colors.orange,
+                    color: Colors.blue,
                   ),
                   SingleChildScrollView(
                     padding: EdgeInsets.only(top: screenWidth / 1.5),
@@ -118,32 +117,6 @@ class _AnimeDetailScreenState extends State<AnimeDetailScreen> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 25, vertical: 15),
                             child: AnimeDetailsGenres(animeData: animeData),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 25),
-                            child: const Text(
-                              'Animes Like This',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            height: screenWidth / 2,
-                            width: screenWidth,
-                            margin: EdgeInsets.symmetric(vertical: 15)
-                                .copyWith(bottom: 35),
-                            child: ListView.builder(
-                              padding: EdgeInsets.symmetric(horizontal: 15),
-                              shrinkWrap: true,
-                              scrollDirection: Axis.horizontal,
-                              itemCount: dataProvider.recommendationList.length,
-                              itemBuilder: (context, index) =>
-                                  RecommendationCard(
-                                recData: dataProvider.recommendationList[index],
-                              ),
-                            ),
                           ),
                         ],
                       ),
