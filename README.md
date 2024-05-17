@@ -24,10 +24,11 @@ Ensure you have Flutter installed on your development machine.
    
 2. **Install dependencies:**
 Navigate to the project directory and run:
-
- flutter pub get
+     ```sh
+     flutter pub get
 
 3. **Run the app:**
+  ```sh
   flutter run
 
 
