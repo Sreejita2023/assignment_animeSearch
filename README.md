@@ -1,4 +1,4 @@
-# Anime Explorer App
+# Anime Search App
 
 This application utilizes the Jikan API to fetch anime names, URLs, and other details. It also uses Dio for network requests, supporting features like global configuration, interceptors, form data, request cancellation, and file uploading/downloading.
 
